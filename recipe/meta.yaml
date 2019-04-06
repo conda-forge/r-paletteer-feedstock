@@ -1,4 +1,4 @@
-{% set version = '0.1.0' %}
+{% set version = '0.2.1' %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -7,17 +7,15 @@ package:
   version: {{ version|replace("-", "_") }}
 
 source:
-  fn: paletteer_{{ version }}.tar.gz
   url:
     - {{ cran_mirror }}/src/contrib/paletteer_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/paletteer/paletteer_{{ version }}.tar.gz
-  sha256: a94bed2cd9af62e89e451d54e353dd8c80d604b37b934d068757b6bec899a009
+  sha256: 05c6cc2cc3900939ab4909150647aa9cf2ae5ca53602e956f3988a2d01e99723
 
 build:
   merge_build_host: True  # [win]
   number: 0
-  # no OSX package for r-pals via r-rgl
-  skip: true  # [win32 or osx]
+  noarch: generic
   rpaths:
     - lib/R/lib/
     - lib/
@@ -27,7 +25,9 @@ requirements:
     - {{posix}}zip               # [win]
   host:
     - r-base
-    - r-ggthemes
+    - r-gameofthrones >=1.0.0
+    - r-ggthemes >=4.0.0
+    - r-harrypotter >=2.1.0
     - r-jcolors
     - r-oompabase
     - r-palr
@@ -37,7 +37,9 @@ requirements:
     - r-viridislite
   run:
     - r-base
-    - r-ggthemes
+    - r-gameofthrones >=1.0.0
+    - r-ggthemes >=4.0.0
+    - r-harrypotter >=2.1.0
     - r-jcolors
     - r-oompabase
     - r-palr
@@ -59,13 +61,29 @@ about:
     color palettes across the R ecosystem under the same package with a streamlined
     API.
   license_family: GPL3
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'  # [unix]
-  license_file: '{{ environ["PREFIX"] }}\R\share\licenses\GPL-3'  # [win]
+  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
 
 extra:
   recipe-maintainers:
-    - johanneskoester
-    - bgruening
-    - daler
-    - jdblischak
-    - cbrueffer
+    - conda-forge/r
+
+# Package: paletteer
+# Version: 0.2.1
+# Title: Comprehensive Collection of Color Palettes
+# Description: The choices of color palettes in R can be quite overwhelming with  palettes spread over many packages with many different API's. This packages aims to collect all color palettes across the R ecosystem under the same package with a streamlined API.
+# Author: See AUTHORS file.
+# Maintainer: Emil Hvitfeldt <emilhhvitfeldt@gmail.com>
+# License: GPL-3
+# Copyright: See LICENSE.note file.
+# Encoding: UTF-8
+# LazyData: true
+# URL: https://github.com/EmilHvitfeldt/paletteer
+# BugReports: https://github.com/EmilHvitfeldt/paletteer/issues
+# RoxygenNote: 6.1.1
+# Depends: R (>= 2.10)
+# Imports: gameofthrones (>= 1.0.0), ggthemes (>= 4.0.0), jcolors, oompaBase, harrypotter (>= 2.1.0), palr, pals, scico, viridisLite, rlang
+# Suggests: covr, testthat, ggplot2, knitr, rmarkdown
+# NeedsCompilation: no
+# Packaged: 2019-02-10 19:29:13 UTC; emilhvitfeldthansen
+# Repository: CRAN
+# Date/Publication: 2019-02-13 22:00:08 UTC
