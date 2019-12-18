@@ -35,6 +35,10 @@ requirements:
     - r-rlang
     - r-scico
     - r-viridislite
+    - r-glue
+    - r-rematch2
+    - r-rstudioapi
+    - r-prismatic
   run:
     - r-base
     - r-gameofthrones >=1.0.0
@@ -47,6 +51,10 @@ requirements:
     - r-rlang
     - r-scico
     - r-viridislite
+    - r-glue
+    - r-rematch2
+    - r-rstudioapi
+    - r-prismatic
 
 test:
   commands:
