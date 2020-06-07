@@ -1,4 +1,4 @@
-{% set version = "1.1.0" %}
+{% set version = "1.2.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/paletteer_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/paletteer/paletteer_{{ version }}.tar.gz
-  sha256: 023c56661650c3e8805428781bfcaa985026fa29f508c69bae4ae1e9b7d60171
+  sha256: 9415d377121eba37eae97250504345895d6d2af4644a68c66b0757656c6cf8ae
 
 build:
   merge_build_host: true  # [win]
-  number: 1
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -64,8 +64,7 @@ test:
 about:
   home: https://github.com/EmilHvitfeldt/paletteer
   license: GPL-3
-  summary: The choices of color palettes in R can be quite overwhelming with  palettes spread over many packages with many different API's. This packages aims to
-    collect all color palettes across the R ecosystem under the same package with a streamlined API.
+  summary: The choices of color palettes in R can be quite overwhelming with  palettes spread over many packages with many different API's. This packages aims to collect all color palettes across the R ecosystem under the same package with a streamlined API.
   license_family: GPL3
   license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
 
