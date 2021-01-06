@@ -5,11 +5,9 @@ Home: https://github.com/EmilHvitfeldt/paletteer
 
 Package license: GPL-3
 
-Feedstock license: BSD 3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-paletteer-feedstock/blob/master/LICENSE.txt)
 
 Summary: The choices of color palettes in R can be quite overwhelming with  palettes spread over many packages with many different API's. This packages aims to collect all color palettes across the R ecosystem under the same package with a streamlined API.
-
-
 
 Current build status
 ====================
