@@ -1,4 +1,4 @@
-{% set version = "1.2.0" %}
+{% set version = "1.3.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/paletteer_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/paletteer/paletteer_{{ version }}.tar.gz
-  sha256: 9415d377121eba37eae97250504345895d6d2af4644a68c66b0757656c6cf8ae
+  sha256: 5b1b6e63946e0ff39cdc3fb992ab831b270d447bad3d458f8c319c5c47c7b487
 
 build:
   merge_build_host: true  # [win]
