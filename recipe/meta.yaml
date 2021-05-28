@@ -63,7 +63,7 @@ test:
 
 about:
   home: https://github.com/EmilHvitfeldt/paletteer
-  license: GPL-3
+  license: GPL-3.0-only
   summary: The choices of color palettes in R can be quite overwhelming with  palettes spread over many packages with many different API's. This packages aims to collect all color palettes across the R ecosystem under the same package with a streamlined API.
   license_family: GPL3
   license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
