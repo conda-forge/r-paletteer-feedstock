@@ -1,4 +1,4 @@
-{% set version = "1.6.0" %}
+{% set version = "1.7.0" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/paletteer_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/paletteer/paletteer_{{ version }}.tar.gz
-  sha256: b5de20300c93df203ddc4f3bfeb0a825ef2745c22d66590b33cef9e7448d92d8
+  sha256: 2b467fb0750e6e02d1340844286dd0271f9caa07084252d88a2a5b5ee2e43b8b
 
 build:
-  number: 2
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
